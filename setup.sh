@@ -19,6 +19,7 @@ sudo apt install nanomsg-utils -yq
 sudo apt install ninja-build
 sudo apt install fio -yq
 sudo apt install net-tools -qq
+sudo apt-get install gcc g++ make -qq
 sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt install nodejs -qq
 npm --version
@@ -78,7 +79,7 @@ npm i -g --force n
 n -p i lts
 
 sudo rm -rf /usr/bin/node
-sudo ln -s /root/n/bin/node /usr/bin/node
+sudo ln -s $USER/n/bin/node /usr/bin/node
 
 npm i -g npm
 npm i -g node-gyp
