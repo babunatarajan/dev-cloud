@@ -2,7 +2,7 @@ curl -fsSL https://code-server.dev/install.sh | sh
 cd /tmp/
 wget https://github.com/coder/code-server/releases/download/v3.12.0/code-server_3.12.0_amd64.deb
 apt install /tmp/code-server_3.12.0_amd64.deb 
-systemctl enable --now code-server@$USER
+systemctl enable code-server@$USER
 
 sed -i "s/127.0.0.1/0.0.0.0/g" $HOME/.config/code-server/config.yaml
 
